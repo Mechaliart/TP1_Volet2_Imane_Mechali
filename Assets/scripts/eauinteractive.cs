@@ -1,4 +1,13 @@
 using UnityEngine;
+using System.Collections.Generic;
+using System.Collections;
+us
+
+
+
+
+
+
 [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer), typeof(EdgeCollider2D))]
 [RequireComponent(typeof(WaterTriggerHandler))]
 public class eauinteractive : MonoBehaviour
@@ -20,6 +29,8 @@ private Vector3[] vertices;
 private int[] topVertices;
 
 private EdgeCollider2D edgeCollider;
+private void Start(){
+  GenerateMesh();}
 
    private void Reset()
 {
