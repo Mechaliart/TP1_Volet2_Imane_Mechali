@@ -13,7 +13,7 @@ public class TransitionManager : MonoBehaviour
     [SerializeField] private int bubbleCount = 20;
 
     [Header("Bubble Settings")]
-    [SerializeField] private Sprite bubbleSprite;   // assign a circle sprite
+    [SerializeField] private Sprite bubbleSprite;   // pour pouvoir mettre le sprite de la bulle dans l'inspecteur
     [SerializeField] private float bubbleMinSize = 0.2f;
     [SerializeField] private float bubbleMaxSize = 0.8f;
     [SerializeField] private float bubbleRiseSpeed = 3f;

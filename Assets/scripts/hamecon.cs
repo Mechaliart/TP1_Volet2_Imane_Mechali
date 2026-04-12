@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class Bait : MonoBehaviour
 {
+    //variables pour la physuique de l'hamecon
     [SerializeField] private float gravity = -1.5f;
     [SerializeField] private fildepeche rope;
-    [SerializeField] private float springStrength = 10f;  // how fast it snaps back
+    [SerializeField] private float springStrength = 50f;  // how fast it snaps back
     [SerializeField] private float damping = 0.85f;       // reduces bouncing
 
     private Vector2 velocity;
@@ -48,4 +49,8 @@ public class Bait : MonoBehaviour
     // Call these from your Glisser.cs
     public void StartDrag() { isDragging = true; }
     public void StopDrag() { isDragging = false; }
+
+
+
+
 }
