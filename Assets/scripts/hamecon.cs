@@ -3,13 +3,32 @@ using UnityEngine;
 public class Bait : MonoBehaviour
 {
     [SerializeField] private float gravity = -1.5f;
-    [SerializeField] private fildepeche rope; // drag your rope object here
+    [SerializeField] private fildepeche rope;
+    [SerializeField] private float springStrength = 10f;  // how fast it snaps back
+    [SerializeField] private float damping = 0.85f;       // reduces bouncing
+
     private Vector2 velocity;
+    private Vector2 initialPosition;
+    private bool isDragging = false;
+
+    void Start()
+    {
+        initialPosition = transform.position; // save starting position
+    }
 
     void Update()
     {
-        // Apply gravity
-        velocity.y += gravity * Time.deltaTime;
+        if (isDragging)
+        {
+            velocity = Vector2.zero; // no physics while dragging
+            return;
+        }
+
+        // Spring back to initial position
+        Vector2 directionHome = initialPosition - (Vector2)transform.position;
+        velocity += directionHome * springStrength * Time.deltaTime;
+        velocity *= damping; // dampen to avoid infinite bouncing
+
         transform.position += (Vector3)(velocity * Time.deltaTime);
 
         // Stop falling if rope is fully stretched
@@ -20,9 +39,13 @@ public class Bait : MonoBehaviour
 
             if (distance > rope.ropeSegLen)
             {
-                velocity.y = 0f; // kill vertical velocity when taut
-                transform.position = (Vector3)ropeEnd; // snap to rope end
+                velocity.y = 0f;
+                transform.position = (Vector3)ropeEnd;
             }
         }
     }
+
+    // Call these from your Glisser.cs
+    public void StartDrag() { isDragging = true; }
+    public void StopDrag() { isDragging = false; }
 }
