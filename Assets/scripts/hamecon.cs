@@ -7,7 +7,7 @@ public class Bait : MonoBehaviour
     [SerializeField] private fildepeche rope;
     [SerializeField] private float springStrength = 50f;  // how fast it snaps back
     [SerializeField] private float damping = 0.85f;       // reduces bouncing
-
+public affichagetextealeatoire scriptTexte;
     private Vector2 velocity;
     private Vector2 initialPosition;
     private bool isDragging = false;
@@ -54,28 +54,20 @@ public class Bait : MonoBehaviour
       //si l'hamecon touche un poisson avec chaque couleur
         //si le poisson correspond a la couleur du texte, on redemarre la couleur du texte
 
-    public   void OnTriggerEnter2D(Collider2D collision) {
+public   void OnTriggerEnter2D(Collider2D collision) {
    
     // if (collision.gameObject.tag == "rouge" && texteCouleur.text == "Rouge")
 
-   if (collision.gameObject.tag == "rouge" && texteCouleur.text == "Rouge") {
+   if (collision.gameObject.tag ==  scriptTexte.couleurChoisie) {
       //code pour le poisson rouge
-       Debug.Log("bon rouge");
+       Debug.Log("bon poisson");
        //rétroaction positive : redemarrer la couleur du texte
-   
-   }else if (collision.gameObject.tag == "bleu") {
-        //code pour le poisson bleu
-         Debug.Log("bleu !");
-   
-   }else if (collision.gameObject.tag == "jaune" ) {
-       // code pour le poisson orange
-       Debug.Log("jaune");
-   
-   }else if (collision.gameObject.tag == "vert" ) {
-       // code pour le poisson vert
-       Debug.Log("vert");
+       collision.gameObject.GetComponent<GestionPoisson>().DesactiverPoisson();
+       scriptTexte.Redmarrer();
+       
+   }else{
+    Debug.Log("mauvais poisson");
    }
 }  
-    
 
 }

@@ -9,6 +9,10 @@ TagManager:
   - bleu
   - jaune
   - orange
+  - Rouge
+  - Vert
+  - Bleu
+  - Jaune
   layers:
   - Default
   - TransparentFX

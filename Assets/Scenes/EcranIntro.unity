@@ -1029,7 +1029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TransitionManager
   transitionDuration: 2
-  bubbleSound: {fileID: 0}
+  bubbleSound: {fileID: 8300000, guid: c41a155d26835774daac2b941fb62afa, type: 3}
   bubbleCount: 61
   bubbleSprite: {fileID: -1047147295164973670, guid: c72ff4ca381ea1e46a5535a790ae7c72, type: 3}
   bubbleMinSize: 0.2

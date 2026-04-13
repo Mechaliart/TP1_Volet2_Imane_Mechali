@@ -283,11 +283,12 @@ GameObject:
   m_Component:
   - component: {fileID: 53018099}
   - component: {fileID: 53018098}
+  - component: {fileID: 53018102}
   - component: {fileID: 53018100}
   - component: {fileID: 53018101}
   m_Layer: 0
   m_Name: poissonrouge
-  m_TagString: rouge
+  m_TagString: Rouge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -594,6 +595,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &53018102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53018097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8f36fd22190f749adb92d656a748f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GestionPoisson
 --- !u!1 &122122457
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,6 +987,7 @@ MonoBehaviour:
   rope: {fileID: 0}
   springStrength: 90.1
   damping: 0.85
+  scriptTexte: {fileID: 1330151859}
 --- !u!114 &320556186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1648,6 +1662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::affichagetextealeatoire
   texteCouleur: {fileID: 1330151860}
+  couleurChoisie: 
   textes:
   - Rouge
   - Vert
@@ -1763,11 +1778,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1521397994}
   - component: {fileID: 1521397993}
+  - component: {fileID: 1521397997}
   - component: {fileID: 1521397995}
   - component: {fileID: 1521397996}
   m_Layer: 0
   m_Name: poissonvert
-  m_TagString: vert
+  m_TagString: Vert
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2076,6 +2092,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1521397997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521397992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8f36fd22190f749adb92d656a748f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GestionPoisson
 --- !u!1 &1554515345
 GameObject:
   m_ObjectHideFlags: 0
@@ -2246,11 +2274,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1786232170}
   - component: {fileID: 1786232169}
+  - component: {fileID: 1786232173}
   - component: {fileID: 1786232171}
   - component: {fileID: 1786232172}
   m_Layer: 0
   m_Name: poissonbleu
-  m_TagString: bleu
+  m_TagString: Bleu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2557,6 +2586,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1786232173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786232168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8f36fd22190f749adb92d656a748f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GestionPoisson
 --- !u!1 &1801489691
 GameObject:
   m_ObjectHideFlags: 0
@@ -2567,11 +2608,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1801489693}
   - component: {fileID: 1801489692}
+  - component: {fileID: 1801489696}
   - component: {fileID: 1801489694}
   - component: {fileID: 1801489695}
   m_Layer: 0
   m_Name: poissonjaune
-  m_TagString: jaune
+  m_TagString: Jaune
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2880,6 +2922,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1801489696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801489691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa8f36fd22190f749adb92d656a748f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GestionPoisson
 --- !u!4 &1818881917 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2918750232940006099, guid: f57f185d3a6585245a3d554c7c25cf67, type: 3}
