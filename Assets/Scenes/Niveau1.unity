@@ -284,6 +284,7 @@ GameObject:
   - component: {fileID: 53018099}
   - component: {fileID: 53018098}
   - component: {fileID: 53018100}
+  - component: {fileID: 53018101}
   m_Layer: 0
   m_Name: poissonrouge
   m_TagString: rouge
@@ -338,7 +339,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5375923265491692083, guid: d967ae299873fe54085f2438329cf464, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -566,6 +567,33 @@ PolygonCollider2D:
       - {x: 1.0849999, y: -4.3399997}
       - {x: 1.135, y: -4.31}
   m_UseDelaunayMesh: 1
+--- !u!50 &53018101
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53018097}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &122122457
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,6 +839,7 @@ GameObject:
   - component: {fileID: 320556186}
   - component: {fileID: 320556185}
   - component: {fileID: 320556184}
+  - component: {fileID: 320556188}
   m_Layer: 0
   m_Name: hamecon
   m_TagString: Untagged
@@ -1018,6 +1047,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09eb17ed7d1e5d4091693a9645d1dcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Glisser
+--- !u!95 &320556188
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 320556181}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 30aab482410502b48b8d3ea88df644ce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &529495262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,7 +1275,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!224 &1056274060
 RectTransform:
@@ -1768,7 +1819,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2781507577002214556, guid: 48fc372dcc7a35346afc5897cd873c16, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1825,7 +1876,7 @@ PolygonCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -2196,6 +2247,7 @@ GameObject:
   - component: {fileID: 1786232170}
   - component: {fileID: 1786232169}
   - component: {fileID: 1786232171}
+  - component: {fileID: 1786232172}
   m_Layer: 0
   m_Name: poissonbleu
   m_TagString: bleu
@@ -2250,7 +2302,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8944965390797847309, guid: 626428aa416797a428e40b34b6b4a4c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2478,6 +2530,33 @@ PolygonCollider2D:
       - {x: 1.0849999, y: -4.3399997}
       - {x: 1.135, y: -4.31}
   m_UseDelaunayMesh: 1
+--- !u!50 &1786232172
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786232168}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1801489691
 GameObject:
   m_ObjectHideFlags: 0
@@ -2489,6 +2568,7 @@ GameObject:
   - component: {fileID: 1801489693}
   - component: {fileID: 1801489692}
   - component: {fileID: 1801489694}
+  - component: {fileID: 1801489695}
   m_Layer: 0
   m_Name: poissonjaune
   m_TagString: jaune
@@ -2543,7 +2623,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -3305619252092083187, guid: b215a8d87009fc24ea67fd873d2a392a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2773,6 +2853,33 @@ PolygonCollider2D:
       - {x: 0.965, y: -4.39}
       - {x: 1.0749999, y: -4.3399997}
   m_UseDelaunayMesh: 1
+--- !u!50 &1801489695
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801489691}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!4 &1818881917 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2918750232940006099, guid: f57f185d3a6585245a3d554c7c25cf67, type: 3}
@@ -2853,11 +2960,11 @@ SceneRoots:
   - {fileID: 1110487700}
   - {fileID: 1120918849}
   - {fileID: 320556183}
-  - {fileID: 1056274060}
   - {fileID: 1554515348}
-  - {fileID: 1801489693}
   - {fileID: 529495264}
   - {fileID: 1044151447}
+  - {fileID: 1056274060}
+  - {fileID: 1801489693}
   - {fileID: 1786232170}
   - {fileID: 53018099}
   - {fileID: 1521397994}

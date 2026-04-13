@@ -50,25 +50,30 @@ public class Bait : MonoBehaviour
     public void StartDrag() { isDragging = true; }
     public void StopDrag() { isDragging = false; }
 
-public void DetecterCollision(
 
-)
-    {
       //si l'hamecon touche un poisson avec chaque couleur
         //si le poisson correspond a la couleur du texte, on redemarre la couleur du texte
 
-       void OnTriggerEnter2D(Collider2D collision) {
+    public   void OnTriggerEnter2D(Collider2D collision) {
+   
    if (collision.gameObject.tag == "rouge") {
       //code pour le poisson rouge
-       Debug.Log("vert");
+       Debug.Log("rouge");
+       //rétroaction positive : redemarrer la couleur du texte
+   
    }else if (collision.gameObject.tag == "bleu") {
         //code pour le poisson bleu
          Debug.Log("bleu !");
-   }else if (collision.gameObject.tag == "orange") {
+   
+   }else if (collision.gameObject.tag == "jaune" ) {
        // code pour le poisson orange
-       Debug.Log("orange");
+       Debug.Log("jaune");
+   
+   }else if (collision.gameObject.tag == "vert" ) {
+       // code pour le poisson vert
+       Debug.Log("vert");
    }
 }  
-    }
+    
 
 }
