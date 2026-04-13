@@ -11,6 +11,8 @@ public class bonnereponse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //si la colllision de lhamecon correspond a la couleur du texte affiché
+        // gameObject.SetActive(false); //desactiver le poisson
+
     }
 }

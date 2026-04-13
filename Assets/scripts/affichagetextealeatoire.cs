@@ -19,23 +19,26 @@ public class affichagetextealeatoire : MonoBehaviour
     {
       //generer nombre aleatoire entre 0 et la longueur du tableau de textes (assuigner le texte aleatoire a la variable texteCouleur)
         int textealeatoire = Random.Range(0, textes.Length); 
-        texteCouleur.text = textes[textealeatoire]; //afficher le texte aleatoire  
+        texteCouleur.text = textes[textealeatoire]; //afficher le texte aleatoire 
+        // Debug.Log("Le texte aleatoire est : " + texteCouleur.text); //afficher le texte aleatoire dans la console pour verifier que ca marche 
      
-     if(textes.Length == 0){ //la length 0 (le premier element du tableau) correspond a la couleur rouge
-           
-            Debug.Log("Le texte est rouge");
-        }
-        else if(textes.Length == 1){
-           
-            Debug.Log("Le texte est vert");
-        }
-        else if(textes.Length == 2){
-           
-            Debug.Log("Le texte est bleu");
-        }else if(textes.Length == 3){
-          
-            Debug.Log("Le texte est jaune");
-        }
+     if(texteCouleur.text == "Rouge"){
+        Debug.Log("Le texte est rouge");
+        texteCouleur.color = Color.red; //changer la couleur du texte en rouge
+     }
+     else if(texteCouleur.text == "Bleu"){
+        Debug.Log("Le texte est bleu");
+        texteCouleur.color = Color.blue; //changer la couleur du texte en bleu
+     }
+     else if(texteCouleur.text == "Vert"){
+        Debug.Log("Le texte est vert");
+        texteCouleur.color = Color.green; //changer la couleur du texte en vert
+     }
+     else if(texteCouleur.text == "Jaune"){
+        Debug.Log("Le texte est jaune");
+        texteCouleur.color = Color.yellow; //changer la couleur du texte en jaune
+     }
+    
     }
 
     // Update is called once per frame
