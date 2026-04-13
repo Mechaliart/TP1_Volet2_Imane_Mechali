@@ -13,11 +13,11 @@ public class bonnereponse : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        //si la colllision de lhamecon correspond a la couleur du texte affiché
+        // si la colllision de lhamecon correspond a la couleur du texte affiché
         // gameObject.SetActive(false); //desactiver le poisson
-                //si la colllision de lhamecon correspond a la couleur du texte affiché
+                // si la colllision de lhamecon correspond a la couleur du texte affiché
         // gameObject.SetActive(false); //desactiver le poisson
-            //    if (texteCouleur.text == "Rouge" && collision.gameObject.tag == "rouge") {
+//                if (texteCouleur.text == "Rouge" && collision.gameObject.tag == "rouge") {
 //  Debug.Log("Bonne reponse");
 //         }
 //         else if (texteCouleur.text == "Bleu" && collision.gameObject.tag == "bleu") {
@@ -33,3 +33,4 @@ public class bonnereponse : MonoBehaviour
 
     }
 }
+

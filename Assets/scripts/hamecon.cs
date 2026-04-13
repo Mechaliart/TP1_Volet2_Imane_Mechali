@@ -56,9 +56,11 @@ public class Bait : MonoBehaviour
 
     public   void OnTriggerEnter2D(Collider2D collision) {
    
-   if (collision.gameObject.tag == "rouge") {
+    // if (collision.gameObject.tag == "rouge" && texteCouleur.text == "Rouge")
+
+   if (collision.gameObject.tag == "rouge" && texteCouleur.text == "Rouge") {
       //code pour le poisson rouge
-       Debug.Log("rouge");
+       Debug.Log("bon rouge");
        //rétroaction positive : redemarrer la couleur du texte
    
    }else if (collision.gameObject.tag == "bleu") {
