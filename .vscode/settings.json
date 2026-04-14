@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "TP1_Volet1_Imane_Mechali.slnx"
+    "dotnet.defaultSolution": "TP1_Volet1.slnx"
 }
