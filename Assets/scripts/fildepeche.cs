@@ -2,7 +2,9 @@ using UnityEngine;
 using System.Collections.Generic;
 
 public class fildepeche : MonoBehaviour
-{
+{   
+    //Code pour la simulation du fil de pêche (généré par Claude et adapté par moi-même)
+
     private LineRenderer lineRenderer;
     private List<RopeSegment> ropeSegments = new List<RopeSegment>();
     // private float ropeSegLen = 0.25f;
@@ -39,7 +41,7 @@ public class fildepeche : MonoBehaviour
 
     private void Simulate()
     {
-        // Verlet integration
+       
         for (int i = 0; i < this.segmentLength; i++)
         {
             RopeSegment segment = this.ropeSegments[i];
@@ -50,7 +52,7 @@ public class fildepeche : MonoBehaviour
             this.ropeSegments[i] = segment;
         }
 
-        // Constraint solving
+       
         for (int iteration = 0; iteration < constraintIterations; iteration++)
         {
             ApplyConstraints();
@@ -59,7 +61,7 @@ public class fildepeche : MonoBehaviour
 
     private void ApplyConstraints()
     {
-        // --- Pin the FIRST segment to the rod tip ---
+       
         if (rodTip != null)
         {
             RopeSegment firstSegment = this.ropeSegments[0];
@@ -67,7 +69,7 @@ public class fildepeche : MonoBehaviour
             this.ropeSegments[0] = firstSegment;
         }
 
-        // --- Pin the LAST segment to the bait ---
+       
         if (bait != null)
         {
             RopeSegment lastSegment = this.ropeSegments[this.segmentLength - 1];
@@ -75,7 +77,7 @@ public class fildepeche : MonoBehaviour
             this.ropeSegments[this.segmentLength - 1] = lastSegment;
         }
 
-        // --- Enforce distance constraints along the rope ---
+        
         for (int i = 0; i < this.segmentLength - 1; i++)
         {
             RopeSegment segA = this.ropeSegments[i];
@@ -86,7 +88,7 @@ public class fildepeche : MonoBehaviour
             Vector2 changeDir = (segA.posNow - segB.posNow).normalized;
             Vector2 changeAmount = changeDir * error;
 
-            // Both ends are pinned, so always split correction 50/50
+       
             segA.posNow -= changeAmount * 0.5f;
             segB.posNow += changeAmount * 0.5f;
 

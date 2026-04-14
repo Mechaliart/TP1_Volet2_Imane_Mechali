@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 public class TransitionManager : MonoBehaviour
 {
+    //Ce code a été généré par Claude pour générer des bulles qui montent à l'écran, j'ai crée le sprite moi-mêmes il se trouve dans les assets
+
+
     public static TransitionManager Instance;
 
     [Header("Transition Settings")]
