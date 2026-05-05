@@ -12,8 +12,11 @@ public affichagetextealeatoire scriptTexte;
     private Vector2 initialPosition;
     private bool isDragging = false;
 
+    Rigidbody2D rigidbait;
+
     void Start()
     { 
+        rigidbait = GetComponent<Rigidbody2D>();
         initialPosition = transform.position; // save starting position
     }
 
@@ -47,8 +50,15 @@ public affichagetextealeatoire scriptTexte;
     }
 
    
-    public void StartDrag() { isDragging = true; }
-    public void StopDrag() { isDragging = false; }
+    public void StartDrag() { 
+        isDragging = true; 
+    rigidbait.bodyType = RigidbodyType2D.Static;
+
+    }
+    public void StopDrag() { 
+        isDragging = false; 
+      rigidbait.bodyType = RigidbodyType2D.Dynamic;
+    }
 
 
       //si l'hamecon touche un poisson avec chaque couleur
